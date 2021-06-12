@@ -146,9 +146,11 @@ if __name__ == "__main__":
         gateway = con.send_command(r"show run | in gateway")
         #assume that show run | in gateway output is - ip default-gateway {ipaddr}
         #slice first part of string to only get the ip address
+        #sometimes slice not working?? sometimes there will be another space infront of ip
         gateway = gateway[19:]
+        gateway = gateway.lstrip()
 
         #ping gateway to trigger arp request
-        con.send_command(r"ping {gateway} timeout 1")
+        con.send_command(r"ping {gateway}")
 
         checkArpForIp(gateway)
