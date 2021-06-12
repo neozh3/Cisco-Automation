@@ -24,7 +24,7 @@ with ConnectHandler(**mySwitch) as con:
     con.disable_paging() #term len 0
     con.enable()         #enable
     prompt = con.find_prompt() #get the prompt eg. ESW01#
-
+    hostname = prompt[:-1]
     #list with the outputs of commands entered
     cmdOutput = []
     for c in cmd:
@@ -33,7 +33,7 @@ with ConnectHandler(**mySwitch) as con:
         cmdOutput.append(op)
 
 
-with open("test.txt", "w") as f:
+with open(f"{hostname}.txt", "w") as f:
     #netmiko remove prompt from command output, to manually put back
     for i in range(len(cmd)):
         f.write(prompt)
