@@ -44,9 +44,9 @@ def getIfacecInfo(conPorts):
     toCheckifNotZero = ["input_packets", "output_packets"]
 
     #--clear counters and wait 5 seconds--
-    #con.send_command("clear counters", expect_string=r"[confirm]")
-    #con.send_command("\n")
-    #time.sleep(5)
+    con.send_command("clear counters", expect_string=r"[confirm]")
+    con.send_command("\n")
+    time.sleep(5)
     #-------------------------------------
 
     for port in conPorts:
