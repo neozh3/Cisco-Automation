@@ -26,6 +26,7 @@ from tabulate import tabulate
 
 #--------------------------------------------------------------------#
 
+#---------------CHANGE THESE-----------------------------------------#
 mySwitch = {
     'device_type': 'cisco_ios',
     'host':   '192.168.30.133',
@@ -33,6 +34,10 @@ mySwitch = {
     'password': 'cisco',
     'secret': 'cisco',     # optional, defaults to ''
 }
+
+templatePath = r"C:\Program Files\ntc-templates-master\ntc_templates\templates"
+
+#----------------------- END ----------------------------------------#
 
 
 def convertTxtfsmOp(header, result):
@@ -75,12 +80,11 @@ if __name__ == "__main__":
 
     # pprint(shMacTableOp)
 
-    templatePath = r"C:\Program Files\ntc-templates-master\ntc_templates\templates\cisco_ios_show_mac-address-table.textfsm"
     combinedOldMacTable = []
 
     for filename in glob.glob('*.txt'):
 
-        with open(templatePath) as template, open(os.path.join(os.getcwd(), filename), 'r') as output:
+        with open(rf"{templatePath}\cisco_ios_show_mac-address-table.textfsm") as template, open(os.path.join(os.getcwd(), filename), 'r') as output:
             table = textfsm.TextFSM(template)
             header = table.header
             result = table.ParseText(output.read())
@@ -96,7 +100,7 @@ if __name__ == "__main__":
     # ----compare and print the 2 mac tables----
     # NOT TESTED FOR TRUNK PORTS WITH MULTIPLE VLANS YET
     # once stable, can consider just printing error only
-    
+
     # header for print output
     compareHdr = ["New Port", "Old Port + Switch", "VLAN", "MAC Address"]
     finalResult = []
