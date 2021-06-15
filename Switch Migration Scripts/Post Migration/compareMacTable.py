@@ -96,6 +96,7 @@ if __name__ == "__main__":
     # ----compare and print the 2 mac tables----
     # NOT TESTED FOR TRUNK PORTS WITH MULTIPLE VLANS YET
     # once stable, can consider just printing error only
+    
     # header for print output
     compareHdr = ["New Port", "Old Port + Switch", "VLAN", "MAC Address"]
     finalResult = []
