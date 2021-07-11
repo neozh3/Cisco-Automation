@@ -1,0 +1,33 @@
+Interface                      Status         Protocol Description
+Gi0/1                          up             up       DESC1
+Gi0/2                          up             up       DESC2
+Gi0/3                          up             up       DESC3
+Gi0/4                          up             up       DESC4
+Gi1/5                          up             up       DESC5
+Gi1/6                          up             up       DEEEE
+Gi1/7                          admin down     down     AAAAA
+Gi1/8                          up             up       BBBBBB
+Gi0/9                          up             up       DESC1
+Gi0/10                          up             up       DESC2
+Gi0/11                          up             up       DESC3
+Gi0/12                          up             up       DESC4
+Gi1/13                          up             up       DESC5
+Gi1/14                          up             up       DEEEE
+Gi1/25                          admin down     down     AAAAA
+Gi1/3                          up             up       BBBBBB
+Gi0/0                          up             up       DESC1
+Gi0/1                          up             up       DESC2
+Gi0/2                          up             up       DESC3
+Gi0/3                          down             up       DESC4
+Gi1/0                          up             up       DESC5
+Gi1/1                          up             up       DEEEE
+Gi1/2                          admin down     down     AAAAA
+Gi1/3                          up             up       BBBBBB
+Gi0/0                          up             up       DESC1
+Gi0/1                          up             up       DESC2
+Gi0/2                          up             up       DESC3
+Gi0/3                          up             up       DESC4
+Gi1/0                          up             up       DESC5
+Gi1/1                          up             up       DEEEE
+Gi1/2                          admin down     down     AAAAA
+Gi1/3                          up             up       BBBBBB
