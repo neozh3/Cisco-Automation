@@ -1,5 +1,5 @@
 # This script ssh into a cisco device, and perform commands stated in commands.txt
-# It will output the results of the commands in a txt file similar to when you are lloggin your session via ssh
+# It will output the results of the commands in a txt file similar to when you are logging your session via ssh
 
 
 from netmiko import ConnectHandler
