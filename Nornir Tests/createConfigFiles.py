@@ -36,7 +36,11 @@ def create_groups_yml():
         yf.write(f"local_grp : \n")
         yf.write(f'    username : "LOCALUSERNAME"\n')
         yf.write(f'    password : "LOCALPASSWORD"\n')
-
+        yf.write(f'    connection_options:"\n')
+        yf.write(f'        netmiko:"\n')
+        yf.write(f'            extras:"\n')
+        yf.write(f'                secret: "SECRETPWD"\n')
+        
 def create_defaults_yml():
     with open(defaults_filename, "w+") as yf :
         yf.write(f"---\n")
